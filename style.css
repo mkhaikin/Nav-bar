@@ -1,0 +1,308 @@
+/* Reset */
+* {
+  margin: 0 ;
+  padding: 0;
+}
+body{
+  font-family: Merriweather;
+  font-size: 1em;
+
+}
+a {
+  text-decoration:none;
+  color: white;
+}
+/* Invisable Menu*/
+.menu {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+.menu-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 150px;
+
+}
+.menu a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  transition: 0.3s;
+  display: block;
+}
+.menu a:hover, .menu a:focus {
+  color: #f1f1f1;
+}
+.menu .closebtn {
+  position: absolute;
+  top: 30%;
+  right:225px;
+  font-size: 60px;
+  z-index: 5;
+}
+@media screen and (max-height: 450px) {
+  .menu a {font-size: 20px}
+  .menu .closebtn {
+    font-size: 40px;
+    top: 40%;
+    right: 35%;
+  }
+}
+/* Header Before shrink*/
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background:linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+  color:#F1FBF3;
+  z-index: 10;
+  height: 140px;
+  overflow: hidden;
+  -webkit-transition: height 0.5s;
+  -moz-transition: height 0.5s;
+  transition: height 0.5s;
+  text-align:center;
+  line-height:140px;
+  letter-spacing: 4px;
+  font-size:16px;
+  box-shadow: 0px 10px 15px grey;
+}
+.header span{
+  font-size:2em;
+  font-weight:normal;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+/* Header after shrink*/
+.header.shrink {
+  height: 100px;
+  line-height:100px;
+  font-size:12px;
+  box-shadow: 0px 5px 15px grey;
+}
+.header.shrink h1{
+  font-size:24px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+}
+/*Company Logo*/
+.logo {
+  display:block;
+  padding: 0px 0 0px 80px;
+  float: left;
+  vertical-align:middle;
+
+}
+.logo span {
+  padding-left: 25px;
+  font-size:2em;
+  padding-bottom: 5px;
+  width:250px;
+  font-weight:bold;
+  vertical-align:middle;
+}
+.logo span:hover {
+  color: #2cb5e8;
+}
+.logo.span.a {
+  cursor: default;
+}
+.logo span i {
+  vertical-align:middle;
+  padding-right: 15px;
+}
+/* Top Menu*/
+nav {
+  display:block;
+  float:left;
+  padding-left: 10%;
+}
+nav ul {
+  list-style-type: none;
+  vertical-align:middle;
+}
+nav ul li {
+  display: inline;
+  text-decoration:none;
+  font-size: 1.1em;
+  font-weight:bold;
+   }
+nav ul li a {
+    margin-right: 50px;
+}
+nav ul li a:hover {
+  border-bottom: 2px solid currentColor; /* Or whatever color you want */
+  text-decoration: none;
+}
+/* Social Icons*/
+.social {
+  display:block;
+  float:right;
+  padding-right:6%;
+}
+.social ul {
+   list-style-type: none;
+   float:left;
+}
+.social ul li{
+  display: inline;
+  text-decoration:none;
+  font-size: 1em;
+}
+.social ul li a {
+  padding-right:15px;
+  vertical-align:middle;
+}
+/* Potential future scrolldown arrow*/
+.arrow {
+  /*position: absolute;
+  z-index:0;
+  bottom: 0;*/
+  text-align:center;
+  margin: 0 auto;
+  width: 40px;
+  height: 60px; /*change with size of arrow to make sit on bottom */
+  /*   background-image: url(); */
+  /*   background-size: contain; */
+}
+.bounce {
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+/* Full Page*/
+.content{
+  height:auto;
+    text-align:center;
+   /*just to get the page to scroll*/
+}
+.content h1, .content h2{
+  color: #2A343F;
+  padding-top: 25px;
+
+  animation: fadein 2s;
+}
+.boxes {
+  overflow:hidden;
+  padding: 180px 100px 50px 100px;
+  margin: 0 auto;
+  background-color: lightgray;
+  height: auto;
+  text-align:center;
+}
+.boxes h1 {
+  padding-top:100px;
+  color: #2A343F;
+  margin: 0 auto;
+}
+.boxes h2 {
+  padding-bottom: 40px;
+}
+.box{
+  margin:0 auto;
+  border:1px dashed;
+  padding: 50px;
+  margin-bottom: 48px;
+  height:auto;
+  max-width:60%;
+  min-width: 500px;
+  text-align: center;
+  /*border: 1px dashed black;*/
+  overflow: hidden;
+  /*-webkit-transition: background-color 1s;
+  -moz-transition: background-color 1s;
+  transition: background-color 1s; */
+  -webkit-transition: opacity 2s;
+  -moz-transition: opacity 2s;
+  -o-transition: opacity 2s
+  transition: opacity 2s;
+}
+.box h1 {
+  color: #2A343F;
+  padding-top:40px;
+  padding-bottom:20px;
+  text-align: center;
+ /* animation: fadein 3s;
+    -moz-animation: fadein 3s; /* Firefox */
+ /*    -webkit-animation: fadein 3s; /* Safari and Chrome */
+ /*    -o-animation: fadein 3s; /* Opera */
+}
+.box h2 {
+  padding bottom:20px;
+  border-bottom:1px dashed grey;
+  border-spacing:2px;
+}
+.box img {
+  padding-top:40px;
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+  }
+}
+/* box styling */
+.a a.back {
+  z-index:50;
+  top:10px;
+}
+.b, .c, .d{
+    opacity: 0;
+    }
+.blue {
+    opacity: 1;
+}
+.red{
+    opacity: 1;
+}
+.yellow{
+    opacity: 1;
+}
+.solid{
+    border: 1.5px dashed black;
+}
+footer{
+  height:200px;
+  background-color:darkgray;
+}
