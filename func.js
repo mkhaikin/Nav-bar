@@ -1,7 +1,7 @@
 $(function(){
   var start =100;
   var shrinkHeader = 150;
-  var addBlue=250;
+  var addBlue=1000;
   var addRed=1000;
   var addYellow=1500;
 
