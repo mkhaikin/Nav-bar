@@ -168,23 +168,6 @@ nav ul li a:hover {
   padding-right:15px;
   vertical-align:middle;
 }
-/* Potential future scrolldown arrow*/
-.arrow {
-  /*position: absolute;
-  z-index:0;
-  bottom: 0;*/
-  text-align:center;
-  margin: 0 auto;
-  width: 40px;
-  height: 60px; /*change with size of arrow to make sit on bottom */
-  /*   background-image: url(); */
-  /*   background-size: contain; */
-}
-.bounce {
-  -moz-animation: bounce 2s infinite;
-  -webkit-animation: bounce 2s infinite;
-  animation: bounce 2s infinite;
-}
 /* Full Page*/
 .content{
 
@@ -196,23 +179,75 @@ nav ul li a:hover {
   width: 100%;
   margin: 0 auto;
   position: relative;
-  padding-top: 100px;
+  padding-top: 80px;
+  text-align: center;
 }
 .content .container h1 {
-  padding-top: 200px;
    position: absolute;
   color: #2A343F;
   animation: fadein 2s;
-  top: 70%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.content img {
-
+/* Potential future scrolldown arrow*/
+.arrow {
+  opacity: 0.7;
+  position: absolute;
+  z-index:0;
+  bottom: 0;
+  text-align:center;
+  margin: 0 auto;
+  width: 40px;
+  height: 60px; /*change with size of arrow to make sit on bottom */
+    /* background-image: url();
+    background-size: contain; */
+  left:50%;
+  bottom: 8%;
+}
+.bounce {
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+@-webkit-keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+}
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
 }
 .boxes {
   overflow:hidden;
-  padding: 0px 100px 50px 100px;
+  padding: 100px 100px 50px 100px;
   margin: 0 auto;
   background-color: lightgray;
   height: auto;
@@ -228,11 +263,11 @@ nav ul li a:hover {
 }
 .box{
   margin:0 auto;
-  border:1px dashed;
+  border:1px dashed grey;
   padding: 50px;
   margin-bottom: 48px;
-  height:auto;
-  max-width:60%;
+  height:350px;
+  max-width:30%;
   min-width: 500px;
   text-align: center;
   /*border: 1px dashed black;*/
@@ -262,6 +297,7 @@ nav ul li a:hover {
 }
 .box img {
   padding-top:40px;
+  width: 30%;
 }
 @keyframes fadein {
     from {
